@@ -1,7 +1,6 @@
 import React from 'react'
 import Head from 'next/head'
 import Router from 'next/router'
-import styled from 'styled-components';
 
 import Header from '../components/Header'
 import {getUserFromServerCookie, getUserFromLocalCookie} from '../utils/auth'
