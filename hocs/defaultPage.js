@@ -15,6 +15,8 @@ export default Page => class DefaultPage extends React.Component {
             currentUrl: ctx.pathname,
             isAuthenticated: !!loggedUser
         }
+
+
     }
 
     constructor(props) {
@@ -41,6 +43,7 @@ export default Page => class DefaultPage extends React.Component {
         const cssFiles = [
             'https://unpkg.com/normalize.css@5.0.0/normalize.css'
         ]
+        console.log(this.props.loggedUser)
         return (
             <div>
                 <Head>
@@ -62,6 +65,6 @@ export default Page => class DefaultPage extends React.Component {
 
 
             </div>
-    )
+        )
     }
-    }
+}

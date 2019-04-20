@@ -6,13 +6,13 @@ import styled from 'styled-components'
 
 import defaultPage from '../hocs/defaultPage'
 
-const Index = ({isAuthenticated}) => (
+const Index = ({isAuthenticated,loggedUser}) => (
+
     <div>
 
         <div>
             {!isAuthenticated && (
                 <div>
-
                     <div className="container-fluid bg">
                         <div className="container">
                             <div className="row">
@@ -24,21 +24,21 @@ const Index = ({isAuthenticated}) => (
                         </div>
                     </div>
                     <div className="content">
-                    <div className="container-fluid">
-                        <div className="row">
-                            <div className="col-3">
-                                <img src=""/>
-                            </div>
-                            <div className="col">
+                        <div className="container-fluid">
+                            <div className="row">
+                                <div className="col-3">
+                                    <img src=""/>
+                                </div>
+                                <div className="col">
                                 <span>
                                     <h1>
                                         Google
                                     </h1><br/>
                                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus magnam obcaecati totam.
                                 </span>
+                                </div>
                             </div>
                         </div>
-                    </div>
 
                         <div className="container-fluid">
                             <div className="row">
@@ -74,19 +74,17 @@ const Index = ({isAuthenticated}) => (
                 </div>
             )}
             {isAuthenticated && (
-                <div>
+                <div className="bg1">
                     <div className="container">
                         <div className="card">
-                            <img src="../assests/a1.jpeg" className="card-img-top" alt="..."/>
+                            <img src={loggedUser.picture} className="card-img-top" alt="..."/>
                             <div className="card-body">
-                                <h5 className="card-title">Card title</h5>
-                                <p className="card-text">Some quick example text to build on the card title and make up
-                                    the bulk of the card's content.</p>
+                                <h5 className="card-title">{loggedUser.name}</h5>
+                                <p className="card-text">{loggedUser.email}</p>
+                                <p className="card-text">{loggedUser.nickname}</p>
                                 <a href="#" className="btn btn-primary">Go somewhere</a>
                             </div>
                         </div>
-
-
                     </div>
                     <div className="container">
                         <a href="#" onClick={Card} className="btn btn-primary">Add Gig</a>
@@ -99,7 +97,8 @@ const Index = ({isAuthenticated}) => (
 )
 
 Index.propTypes = {
-    isAuthenticated: PropTypes.bool.isRequired
+    isAuthenticated: PropTypes.bool.isRequired,
+    loggedUser: PropTypes.object.isRequired
 }
 
 export default defaultPage(Index)
