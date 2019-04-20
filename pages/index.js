@@ -1,15 +1,13 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Card from '../components/Card'
+import Card from './gig'
 import Link from 'next/link'
 import styled from 'styled-components'
 
 import defaultPage from '../hocs/defaultPage'
 
-const Index = ({isAuthenticated,loggedUser}) => (
-
+const Index = ({isAuthenticated, loggedUser}) => (
     <div>
-
         <div>
             {!isAuthenticated && (
                 <div>
@@ -47,7 +45,7 @@ const Index = ({isAuthenticated,loggedUser}) => (
                                 </div>
                                 <div className="col">
                                 <span>
-                                    <h1>
+                                      <h1>
                                         Google
                                     </h1><br/>
                                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus magnam obcaecati totam.
@@ -75,19 +73,23 @@ const Index = ({isAuthenticated,loggedUser}) => (
             )}
             {isAuthenticated && (
                 <div className="bg1">
-                    <div className="container">
-                        <div className="card">
-                            <img src={loggedUser.picture} className="card-img-top" alt="..."/>
-                            <div className="card-body">
-                                <h5 className="card-title">{loggedUser.name}</h5>
-                                <p className="card-text">{loggedUser.email}</p>
-                                <p className="card-text">{loggedUser.nickname}</p>
-                                <a href="#" className="btn btn-primary">Go somewhere</a>
+                    <div className="container profile">
+                        <div className="row">
+                            <div className="col">
+                                <div className="card ">
+                                    <img src={loggedUser.picture} className="card-img-top" alt="..."/>
+                                    <div className="card-body">
+                                        <h5 className="card-title">{loggedUser.name}</h5>
+                                        <p className="card-text">{loggedUser.email}</p>
+                                        <p className="card-text">{loggedUser.nickname}</p>
+                                        <a href="#" className="btn btn-primary">Go somewhere</a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div className="container">
-                        <a href="#" onClick={Card} className="btn btn-primary">Add Gig</a>
+                        <a href="/gig" className="btn btn-primary">Add Gig</a>
                     </div>
                 </div>
 
