@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import Card from './gig'
 import Link from 'next/link'
 import styled from 'styled-components'
-
+import GigItem from '../components/gig-item'
 import defaultPage from '../hocs/defaultPage'
 
 const Index = ({isAuthenticated, loggedUser}) => (
@@ -68,6 +68,7 @@ const Index = ({isAuthenticated, loggedUser}) => (
                                 </div>
                             </div>
                         </div>
+                        
                     </div>
                 </div>
             )}
@@ -88,12 +89,17 @@ const Index = ({isAuthenticated, loggedUser}) => (
                             </div>
                         </div>
                     </div>
-                    <div className="container">
-                        <a href="/gig" className="btn btn-primary">Add Gig</a>
-                    </div>
                 </div>
 
             )}
+            <div className="container">
+            <div className="row">
+            <div className="col-3">
+            </div>
+            </div>
+            <h1> All Gigs</h1> {isAuthenticated && <a href="/gig" className="btn btn-primary">Add Gig</a>}
+            <GigItem></GigItem>        
+            </div>
         </div>
     </div>
 )
