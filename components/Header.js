@@ -2,7 +2,9 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import defaultPage from '../hocs/defaultPage'
 
-
+const logo={
+    height: '56px',    
+};
 const Navbar = ({isAuthenticated,loggedUser}) => (
     <nav className="navbar navbar-expand-lg navbar-light ">
         {/*<a className="navbar-brand" href="#">Navbar</a>*/}
@@ -13,6 +15,9 @@ const Navbar = ({isAuthenticated,loggedUser}) => (
 
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav mr-auto">
+            <div>
+            <img src="../static/a1.jpeg" style={logo}/>
+            </div>
                 <li className="nav-item active">
                     <a className="nav-link" href="/">Home <span className="sr-only">(current)</span></a>
                 </li>

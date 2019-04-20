@@ -5,14 +5,19 @@
     /*height: 100%;*/
     background-size: cover;
     /*background-position: center center;*/
-    height: 40rem;
+    height: 20rem;
     text-align: center;
     /*position: absolute;*/
 
 }
 
+.card{
+    box-shadow:         3px 3px 5px 6px #ccc;
+    margin-bottom: 20px;
+}
+
 .bg .text {
-    margin-top: 22rem;
+    align-content: center;
     font-weight: 700;
     font-size: 3.5rem;
     /*text-align: center;*/
@@ -35,7 +40,7 @@
     /*padding: 2rem;*/
     padding-top: 2rem;
     padding-bottom: 2rem;
-    border: solid teal;
+    border: solid;
     border-radius: 2rem;
 }
 
@@ -131,4 +136,8 @@ body {
     padding-top: 5rem;
     padding-left: 35%;
     padding-right: 35%;
+}
+
+.descr{
+    width: 50%;
 }
