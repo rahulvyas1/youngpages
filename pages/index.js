@@ -9,7 +9,7 @@ import defaultPage from '../hocs/defaultPage'
 const Index = ({isAuthenticated, loggedUser}) => (
     <div>
         <div>
-            {!isAuthenticated && (
+            {/*{!isAuthenticated && (*/}
                 <div>
                     <div className="container-fluid bg">
                         <div className="container">
@@ -71,6 +71,7 @@ const Index = ({isAuthenticated, loggedUser}) => (
                         
                     </div>
                 </div>
+<<<<<<< HEAD
             )}
             {isAuthenticated && (
                 <div className="bg1">
@@ -100,6 +101,32 @@ const Index = ({isAuthenticated, loggedUser}) => (
             <h1> All Gigs</h1> {isAuthenticated && <a href="/gig" className="btn btn-primary">Add Gig</a>}
             <GigItem></GigItem>        
             </div>
+=======
+            // )}
+            {/*{isAuthenticated && (*/}
+                {/*<div className="bg1">*/}
+                    {/*<div className="container profile">*/}
+                        {/*<div className="row">*/}
+                            {/*<div className="col">*/}
+                                {/*<div className="card ">*/}
+                                    {/*<img src={loggedUser.picture} className="card-img-top" alt="..."/>*/}
+                                    {/*<div className="card-body">*/}
+                                        {/*<h5 className="card-title">{loggedUser.name}</h5>*/}
+                                        {/*<p className="card-text">{loggedUser.email}</p>*/}
+                                        {/*<p className="card-text">{loggedUser.nickname}</p>*/}
+                                        {/*<a href="#" className="btn btn-primary">Go somewhere</a>*/}
+                                    {/*</div>*/}
+                                {/*</div>*/}
+                            {/*</div>*/}
+                        {/*</div>*/}
+                    {/*</div>*/}
+                    {/*<div className="container">*/}
+                        {/*<a href="/gig" className="btn btn-primary">Add Gig</a>*/}
+                    {/*</div>*/}
+                {/*</div>*/}
+
+            {/*)}*/}
+>>>>>>> ff4503e64b1a9cc3881263092ad762022f9986af
         </div>
     </div>
 )

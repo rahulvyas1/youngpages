@@ -3,9 +3,9 @@ import PropTypes from 'prop-types'
 import defaultPage from '../hocs/defaultPage'
 
 
-const Navbar = ({isAuthenticated}) => (
+const Navbar = ({isAuthenticated,loggedUser}) => (
     <nav className="navbar navbar-expand-lg navbar-light ">
-        <a className="navbar-brand" href="#">Navbar</a>
+        {/*<a className="navbar-brand" href="#">Navbar</a>*/}
         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"/>
@@ -37,12 +37,19 @@ const Navbar = ({isAuthenticated}) => (
                     </li>
                 )}
             </ul>
+            {isAuthenticated && (
+                <form className="form-inline my-2 my-lg-0">
+                    <p>Hello, {loggedUser.name}</p>
+                </form>
+            )}
+
         </div>
     </nav>
 )
 
 Navbar.propTypes = {
-    isAuthenticated: PropTypes.bool.isRequired
+    isAuthenticated: PropTypes.bool.isRequired,
+    loggedUser:PropTypes.object.isRequired
     // currentUrl: PropTypes.string.isRequired
 }
 
