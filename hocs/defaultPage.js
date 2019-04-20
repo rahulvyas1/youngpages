@@ -54,6 +54,7 @@ export default Page => class DefaultPage extends React.Component {
                           href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
                           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
                           crossOrigin="anonymous"/>
+                    <link rel="stylesheet" href="../static/styles.css"/>
                 </Head>
 
                 <Header {...this.props} />
