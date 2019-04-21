@@ -43,6 +43,7 @@ const Navbar = ({isAuthenticated,loggedUser}) => (
                 )}
             </ul>
             {isAuthenticated && (
+                    
                 <form className="form-inline my-2 my-lg-0">
                     <p>Hello, {loggedUser.name}</p>
                 </form>
