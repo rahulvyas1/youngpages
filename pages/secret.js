@@ -97,7 +97,7 @@ const Secret = ({loggedUser}) => (
 )
 
 Secret.propTypes = {
-    loggedUser: PropTypes.object.isRequired
-}
+        loggedUser: PropTypes.object.isRequired
+    }
 
 export default securePage(Secret)
